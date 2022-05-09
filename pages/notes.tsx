@@ -35,6 +35,7 @@ const Notes: NextPage<StaticProps> = ({ notes }) => {
         onClick={signOut}
       />
       <DocumentTextIcon className="h-8 w-8 text-blue-500" />
+      test
       <ul className="my-2">
         {notes.map((note) => (
           <NoteItem
