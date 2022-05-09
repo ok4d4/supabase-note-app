@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Data = {
@@ -17,10 +16,12 @@ export default async function handler(
   }
   let revalidated = false;
   try {
-    await res.unstable_revalidate('/notes'); //ISRで再生成したいページのパス
+    await res.unstable_revalidate('/notes');
     revalidated = true;
   } catch (err) {
     console.log(err);
   }
-  res.json({ revalidated });
+  res.json({
+    revalidated,
+  });
 }

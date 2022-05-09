@@ -14,7 +14,7 @@ export const useMutateNote = () => {
     },
     {
       onSuccess: () => {
-        //revalidateList();
+        //revalidateList()
         reset();
         alert('Successfully completed !!');
       },
@@ -35,8 +35,8 @@ export const useMutateNote = () => {
     },
     {
       onSuccess: (res) => {
-        //revalidateList();
-        revalidateSingle(res[0].id); //今更新したページがresに入っている
+        //revalidateList()
+        revalidateSingle(res[0].id);
         reset();
         alert('Successfully completed !!');
       },
@@ -57,7 +57,7 @@ export const useMutateNote = () => {
     },
     {
       onSuccess: () => {
-        //revalidateList();
+        //revalidateList()
         reset();
         alert('Successfully completed !!');
       },
